@@ -17,8 +17,8 @@ body, html {
 .background {
     position: relative;
     height: 100%;
-    background-image: url('https://cdn.discordapp.com/attachments/1104493356781940766/1139636421443985478/image.png');
-    filter: blur(0px);
+    background-image: url('your-image-url-here.jpg');
+    filter: blur(5px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -55,29 +55,5 @@ h1 {
         width: 200vw;
         height: 200vw;
         opacity: 0;
-    }
-}
-.mask {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: white; /* または背景色にしたい色 */
-    z-index: 9999; /* 他の要素より前面に表示 */
-    clip-path: circle(0% at 50% 50%); /* 中心からの円 */
-    pointer-events: none; /* 他の要素のクリックや操作を妨げないように */
-}
-
-.mask-animation {
-    animation: circleReveal 3s forwards;
-}
-
-@keyframes circleReveal {
-    0% {
-        clip-path: circle(50% at 50% 50%);
-    }
-    100% {
-        clip-path: circle(150% at 50% 50%);
     }
 }
