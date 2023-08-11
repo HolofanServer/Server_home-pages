@@ -18,7 +18,7 @@ body, html {
     position: relative;
     height: 100%;
     background-image: url('https://cdn.discordapp.com/attachments/1104493356781940766/1139636421443985478/image.png');
-    filter: blur(1px);
+    filter: blur(0px);
     display: flex;
     justify-content: center;
     align-items: center;
