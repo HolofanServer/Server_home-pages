@@ -1,59 +1,45 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-}
-
-.animation {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.8);
-    animation: expandAnimation 3s forwards;
-}
-
-.background {
-    position: relative;
-    height: 100%;
-    background-image: url('your-image-url-here.jpg');
-    filter: blur(5px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
 header {
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+.menu-btn {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.menu-btn div {
     width: 100%;
+    height: 4px;
+    background-color: #333;
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    right: -400px; /* 初期状態で見えないように */
+    width: 400px;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
+    transition: right 0.3s ease-in-out;
 }
 
-nav a {
-    color: white;
-    padding: 15px 20px;
-    text-decoration: none;
-    display: inline-block;
+.modal ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-h1 {
-    color: white;
-    font-size: 2em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes expandAnimation {
-    0% {
-        width: 0;
-        height: 0;
-    }
-    100% {
-        width: 200vw;
-        height: 200vw;
-        opacity: 0;
-    }
+.modal li {
+    padding: 20px;
+    font-size: 1.5em;
+    color: #fff;
 }
